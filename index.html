@@ -1,0 +1,238 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css" /> 
+
+<img src="https://ucarecdn.com/b16cb947-738f-4c45-b15c-95e6479f732e/utensils.png" alt="utensils" border="0" id="utensils" width="300" height="300"/>
+
+<label for="myCheck" class="container">Request Disposable Utensils？
+  <input id="myCheck" type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+
+<button onclick="buttonclick()" id="button">Send</button>
+
+<img src="https://ucarecdn.com/ce25f028-483e-4b2b-8720-20edda728c8a~1/nth/0/sea-turtle.png" alt="sea-turtle" border="0" id="turtle" width="300" height="219"/>
+
+<img src="https://ucarecdn.com/00f0d2dc-61a8-410a-aa87-7736fb38b066/seaturtle2.png" alt="sea-turtle2" border="0" id="turtle2" width="300" height="219"/>
+
+<img src="https://ucarecdn.com/7dca7e48-d2d2-4cff-8ff0-84dea9d1ace6/seaturtle3.png" alt="sea-turtle3" border="0" id="turtle3" width="421" height="297"/>
+
+
+
+
+<style>
+body {background-color: #4061B2;}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  left: 28%;
+  padding-left: 8%;
+  padding-top: 5%;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 45px;
+  color: white;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 60%;
+  left: 4%;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 13px;
+  top: 1px;
+  width: 18px;
+  height: 36px;
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#myCheck{
+height:50px; 
+width: 50px;
+position: absolute;
+top: 40%;
+left: 38%;
+border:3 px solid #aaa;
+background: #FFF;
+cursor: pointer;
+
+}
+
+#button{
+transform: scale(2);
+position: relative;
+top: 50%;
+left: 50%;
+background: #FFF;
+cursor: pointer;
+
+}
+
+#turtle{
+  position: fixed;
+  top: 5%;
+  left: 28%;
+  visibility: hidden;
+  
+}
+
+#turtle2{
+  position: fixed;
+  top: 5%;
+  left: 28%;
+  visibility: hidden;
+}
+
+#turtle3{
+  position: fixed;
+  top: 5%;
+  left: 28%;
+  visibility: hidden;
+  
+}
+
+#utensils{
+  position: absolute;
+  top: 5%;
+  left: 43%;
+  opacity: 0.2;
+  
+}
+</style>
+
+<script>
+function myFunction() {
+  alert("Hello! I am an vvvvvalert box!");}
+
+var countClicks = 0;
+  function buttonclick() 
+  {
+     countClicks++;
+      console.log(countClicks);
+    
+ if (countClicks === 1)
+ {
+   function2();
+ }  
+    else if(countClicks === 2)
+    {
+      function3();
+    }
+    else (countClicks >= 3)
+    {
+      function4();
+    }
+  }
+
+
+function function2() {
+  var x = document.getElementById('myCheck');
+  console.log(x.checked);
+ if( x.checked === true){
+  setTimeout(() => {showImageT1()},3000);
+   alert("🚫You do not allow to request utensils!🚫 Please love the earth 🌏!");
+   x.checked = false;
+   setTimeout(() => {unshowImageT1();},4000);
+   unshowImageT1();}
+  }
+
+function function3() {
+  var x = document.getElementById('myCheck');
+  console.log(x.checked);
+ if( x.checked === true){
+  setTimeout(() => {showImageT2()},3000);
+   alert("💢seriously?!💢 you will destroy the earth 🌏! ");
+   x.checked = false;
+   setTimeout(() => {unshowImageT2();},4000);
+   unshowImageT2();}
+  }
+
+function function4() {
+  var x = document.getElementById('myCheck');
+  console.log(x.checked);
+ if( x.checked === true){
+  setTimeout(() => {showImageT3()},2000);
+   alert("🤬Sea turtles hate you🤬");
+   x.checked = false;
+   setTimeout(() => {unshowImageT3();},6000);
+   unshowImageT3();}
+  }
+ 
+function showImageT1() {
+    var img = document.getElementById('turtle');
+    img.style.visibility = 'visible';}
+
+function showImageT2() {
+    var img = document.getElementById('turtle2');
+    img.style.visibility = 'visible';}
+
+function showImageT3() {
+    var img = document.getElementById('turtle3');
+    img.style.visibility = 'visible';}
+
+function unshowImageT1() {
+    var img = document.getElementById('turtle');
+    img.style.visibility = 'hidden';}
+
+ 
+function unshowImageT2() {
+    var img = document.getElementById('turtle2');
+    img.style.visibility = 'hidden';}
+
+function unshowImageT3() {
+    var img = document.getElementById('turtle3');
+    img.style.visibility = 'hidden';}
+
+
+
+</script>
